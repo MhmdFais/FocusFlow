@@ -7,5 +7,6 @@ This is a template for a MERN stack project. It includes a basic setup for a Rea
 ```bash
 git clone
 cd MERN-Project-Template
+npm init
 npm install
 ```
