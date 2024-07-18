@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@Font-face {
+    font-family: MainFontBold;
+    src: url(../src/assets/font/bold.ttf);
+}
+
+@font-face {
+    font-family: MainFontRegular;
+    src: url(../src/assets/font/normal.ttf);
+}
+
+:root{
+    --bg-color: #ecfeff;
+    --footer-bg-color: #083344;
+    --header-color: #0891b2;
+}
+
+body{
+    background-color: var(--bg-color);
+    height: 90vh;
+    display: grid;
+    grid-template-rows: 1fr 8fr 2fr;
+}
+
+footer{
+    height: 10vh;
+    background-color: var(--footer-bg-color);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Content Body */
+
+.main-body-container{
+    padding-top: 2vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    height: calc(90vh - 2vh);
+    overflow-y: auto;
+}
+
+/* Header */
+
+.header-text{
+    font-family: MainFontBold;
+    font-size: clamp(2rem, 3vw, 3.5rem);
+    color: var(--header-color);
+}
