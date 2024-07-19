@@ -20,6 +20,17 @@
     --header-color: #0891b2;
 }
 
+/* List styles */
+
+li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
 body{
     background-color: var(--bg-color);
     height: 90vh;
