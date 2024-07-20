@@ -1,0 +1,2 @@
+// FOCUS TIME -- 25 MINS
+// BREAK TIME -- 5 MINS
