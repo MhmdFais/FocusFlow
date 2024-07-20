@@ -1,4 +1,4 @@
-const headerContainer = document.querySelector(".header-contanier");
+const headerContainer = document.querySelectorAll(".header-contanier");
 
 export function createHeader() {
   const headerPElement = createHeaderPElement();
