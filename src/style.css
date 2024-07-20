@@ -23,28 +23,18 @@
     --navigation-underline-color: #083344;
 }
 
-/* List styles */   /* Navigation */
 
-ul{
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
+/* Button */
 
-li{
-    list-style-type: none;
-}
-
-a{
-    text-decoration: none;
-    color: inherit;
-    padding: 0 2vw;
+/* 
+button{
     font-family: MainFontRegular;
     font-size: clamp(1rem, 2vw, 1.5rem);
-    color: var(--navigation-non-focus-color);
-}
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    background-color: inherit;
+}  */
 
 body{
     background-color: var(--bg-color);
@@ -59,11 +49,6 @@ footer{
     position: fixed;
     bottom: 0;
     width: 100%;
-}
-
-.navigation ul li a.active {
-    color: var(--navigation-focus-color);
-    border-bottom: 2px solid var(--navigation-underline-color);
 }
 
 /* Content Body */
