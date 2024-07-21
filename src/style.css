@@ -69,3 +69,11 @@ footer{
     color: var(--header-color);
     padding-bottom: 2vh;
 }
+
+/* Content Container */
+
+.content-container{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2vh;
+}

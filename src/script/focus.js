@@ -1,0 +1,1 @@
+const focusContainer = document.querySelector(".focus-container");
