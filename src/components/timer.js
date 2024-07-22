@@ -2,10 +2,13 @@
 // BREAK TIME -- 5 MINS
 
 export function showTime(time){
+    const showTimeContainer = document.createElement("div");
+    showTimeContainer.classList.add("time-container");
     const time = document.createElement("p");
     time.classList.add("time");
     time.textContent = time;
-    return time;
+    showTimeContainer.appendChild(time);createTheCard
+    return showTimeContainer;
 }
 
 export function startTimeCountdown(time) {
@@ -27,6 +30,11 @@ function updateCountdown(timeLeft, countdownEl) {
     seconds = seconds < 10 ? '0' + seconds : seconds;
 
     countdownEl.innerHTML = `${minutes}:${seconds}`;
+}
+
+export function resetTime(time) {
+    const countdownEl = document.querySelector('.time');
+    countdownEl.innerHTML = time;
 }
 
 
