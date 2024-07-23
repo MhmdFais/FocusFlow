@@ -1,4 +1,4 @@
-import {showTime, startTimeCountdown, resetTime} from '../components/timer'
+import {showTime, startTimeCountdown, resetTime, stopTimeCountdown} from '../components/timer'
 
 const focusContainer = document.querySelector(".focus-container");
 
@@ -51,6 +51,7 @@ function startButtonFunction(){
     startTimeCountdown(25);
 }
 
-function stopButtonFunction(){
+function stopButtonFunction() {
+    stopTimeCountdown();
     resetTime("25:00");
 }

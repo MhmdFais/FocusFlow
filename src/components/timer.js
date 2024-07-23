@@ -1,8 +1,11 @@
-// FOCUS TIME -- 25 MINS
-// SHORT BREAK TIME -- 5 MINS
-// LONG BREAK TIME -- 15 MINS
+// // FOCUS TIME -- 25 MINS
+// // SHORT BREAK TIME -- 5 MINS
+// // LONG BREAK TIME -- 15 MINS
 
-export function showTime(time){
+
+let timerInterval = null;
+
+export function showTime(time) {
     const showTimeContainer = document.createElement("div");
     showTimeContainer.classList.add("time-container");
     const timeEl = document.createElement("p");
@@ -14,15 +17,16 @@ export function showTime(time){
     return showTimeContainer;
 }
 
-export function startTimeCountdown(time) {
-    let startingMinutes = time;
-    let timeLeft = startingMinutes * 60;
-
+export function startTimeCountdown(minutes) {
+    let timeLeft = minutes * 60;
     const countdownEl = document.querySelector('.time');
 
-    setInterval(() => {
+    timerInterval = setInterval(() => {
         updateCountdown(timeLeft, countdownEl);
         timeLeft--;
+        if (timeLeft < 0) {
+            clearInterval(timerInterval);
+        }
     }, 1000);
 }
 
@@ -39,5 +43,13 @@ export function resetTime(time) {
     const countdownEl = document.querySelector('.time');
     countdownEl.innerHTML = time;
 }
+
+export function stopTimeCountdown() {
+    if (timerInterval) {
+        clearInterval(timerInterval);
+        timerInterval = null;
+    }
+}
+
 
 
