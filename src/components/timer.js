@@ -34,7 +34,7 @@ export function startTimeCountdown(minutes) {
     //     }
     // }, 1000);
 
-    while(startButtonPressed) {
+    while(!startButtonPressed) {
         let timeLeft = minutes * 60;
         const countdownEl = document.querySelector('.time');
 
