@@ -4,6 +4,7 @@
 
 
 let timerInterval = null;
+let startButtonPressed = false;
 
 export function showTime(time) {
     const showTimeContainer = document.createElement("div");
@@ -18,16 +19,38 @@ export function showTime(time) {
 }
 
 export function startTimeCountdown(minutes) {
-    let timeLeft = minutes * 60;
-    const countdownEl = document.querySelector('.time');
+    // let timeLeft = minutes * 60;
+    // const countdownEl = document.querySelector('.time');
 
-    timerInterval = setInterval(() => {
-        updateCountdown(timeLeft, countdownEl);
-        timeLeft--;
-        if (timeLeft < 0) {
+    // if (timerInterval) {
+    //     clearInterval(timerInterval);
+    // }
+
+    // timerInterval = setInterval(() => {
+    //     updateCountdown(timeLeft, countdownEl);
+    //     timeLeft--;
+    //     if (timeLeft < 0) {
+    //         clearInterval(timerInterval);
+    //     }
+    // }, 1000);
+
+    while(startButtonPressed) {
+        let timeLeft = minutes * 60;
+        const countdownEl = document.querySelector('.time');
+
+        if (timerInterval) {
             clearInterval(timerInterval);
         }
-    }, 1000);
+
+        timerInterval = setInterval(() => {
+            updateCountdown(timeLeft, countdownEl);
+            timeLeft--;
+            if (timeLeft < 0) {
+                clearInterval(timerInterval);
+            }
+        }, 1000);
+        startButtonPressed = !startButtonPressed;
+    }
 }
 
 function updateCountdown(timeLeft, countdownEl) {
@@ -47,6 +70,7 @@ export function resetTime(time) {
 export function stopTimeCountdown() {
     if (timerInterval) {
         clearInterval(timerInterval);
+        startButtonPressed = !startButtonPressed;
         timerInterval = null;
     }
 }

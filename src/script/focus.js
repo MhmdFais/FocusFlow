@@ -38,7 +38,7 @@ function createButtons(){
 
     const stopButton = document.createElement("button");
     stopButton.classList.add("stop-button");
-    stopButton.textContent = "Stop";
+    stopButton.textContent = "Reset";
     stopButton.addEventListener("click", stopButtonFunction)
 
     buttonsContainer.appendChild(startButton);
