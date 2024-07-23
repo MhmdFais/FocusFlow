@@ -1,13 +1,16 @@
 // FOCUS TIME -- 25 MINS
-// BREAK TIME -- 5 MINS
+// SHORT BREAK TIME -- 5 MINS
+// LONG BREAK TIME -- 15 MINS
 
 export function showTime(time){
     const showTimeContainer = document.createElement("div");
     showTimeContainer.classList.add("time-container");
-    const time = document.createElement("p");
-    time.classList.add("time");
-    time.textContent = time;
-    showTimeContainer.appendChild(time);createTheCard
+    const timeEl = document.createElement("p");
+    timeEl.classList.remove("time");
+    timeEl.textContent = "";
+    timeEl.classList.add("time");
+    timeEl.textContent = time;
+    showTimeContainer.appendChild(timeEl);
     return showTimeContainer;
 }
 

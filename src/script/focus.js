@@ -34,20 +34,23 @@ function createButtons(){
     const startButton = document.createElement("button");
     startButton.classList.add("start-button");
     startButton.textContent = "Start";
-    startButton.addEventListener("click", () => {
-        startTimeCountdown(25);
-    });
+    startButton.addEventListener("click", startButtonFunction)
 
     const stopButton = document.createElement("button");
     stopButton.classList.add("stop-button");
     stopButton.textContent = "Stop";
-    stopButton.addEventListener("click", () => {
-        resetTime(25);
-        startTimeCountdown(25);
-    });
+    stopButton.addEventListener("click", stopButtonFunction)
 
     buttonsContainer.appendChild(startButton);
     buttonsContainer.appendChild(stopButton);
 
     return buttonsContainer;
+}
+
+function startButtonFunction(){
+    startTimeCountdown(25);
+}
+
+function stopButtonFunction(){
+    resetTime("25:00");
 }
