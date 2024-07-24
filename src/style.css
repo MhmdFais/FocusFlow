@@ -24,6 +24,8 @@
     --focus-border-color : black;
     --time-containers-color : white;
     --time-container-shadow: #64748b;
+    --sub-head-color: #64748b;
+    --time-color: #f87171;
 }
 
 
@@ -79,7 +81,7 @@ footer{
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     gap: 2vh;
-    padding: 3vh 3vw;
+    padding: 1vh 3vw;
 }
 
 /* Tomer Containers */
@@ -94,10 +96,62 @@ footer{
 .focus-container{
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
-    gap: 2vh;
+    gap: 1.3vh;
     border: 1px solid var(--focus-border-color);
     border-radius: 1rem;
-    padding: 3vh 4vw;
+    padding: 1vh 3vw;
     background-color: var(--time-containers-color);
     box-shadow: 10px 10px 10px var(--time-container-shadow);
+}
+
+.sub-headeing-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub-heading{
+    font-family: MainFontBold;
+    font-size: clamp(1rem, 1.7vw, 2rem);
+    color: var(--sub-head-color);
+    margin: 0;
+    padding: 0;
+}
+
+.time-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.time{
+    font-family: MainFontRegular;
+    font-size: clamp(1.8rem, 2.15vw, 2.5rem);
+    color: var(--time-color);
+    margin: 0;
+    padding: 0;
+}
+
+.buttons-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    padding-bottom: 0.5vh;
+}
+
+.start-button,
+.stop-button{
+    font-family: MainFontRegular;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    padding: 0.5rem 1rem;
+    border: 0.08rem solid var(--time-container-shadow);
+    cursor: pointer;
+    background-color: inherit;
+}
+
+.start-button:hover,
+.stop-button:hover{
+    background-color: var(--time-container-shadow);
+    color: var(--time-containers-color);
 }
