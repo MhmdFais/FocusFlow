@@ -21,6 +21,9 @@
     --navigation-non-focus-color: #58585f;
     --navigation-focus-color: #18181b;
     --navigation-underline-color: #083344;
+    --focus-border-color : black;
+    --time-containers-color : white;
+    --time-container-shadow: #64748b;
 }
 
 
@@ -76,4 +79,25 @@ footer{
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     gap: 2vh;
+    padding: 3vh 3vw;
+}
+
+/* Tomer Containers */
+
+.content-container{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2vh;
+
+}
+
+.focus-container{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 2vh;
+    border: 1px solid var(--focus-border-color);
+    border-radius: 1rem;
+    padding: 3vh 4vw;
+    background-color: var(--time-containers-color);
+    box-shadow: 10px 10px 10px var(--time-container-shadow);
 }
