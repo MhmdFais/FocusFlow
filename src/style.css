@@ -93,7 +93,8 @@ footer{
 
 }
 
-.focus-container{
+.focus-container,
+.short-break-container{
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 1.3vh;
@@ -155,4 +156,5 @@ footer{
 .stop-button:hover{
     background-color: var(--time-container-shadow);
     color: var(--time-containers-color);
+    transform: scale(0.95);
 }
