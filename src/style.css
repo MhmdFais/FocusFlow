@@ -105,7 +105,7 @@ footer{
     box-shadow: 10px 10px 10px var(--time-container-shadow);
 }
 
-.sub-headeing-container{
+.sub-heading-container{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -125,7 +125,8 @@ footer{
     align-items: center;
 }
 
-.time{
+.focus-time,
+.short-break-time{
     font-family: MainFontRegular;
     font-size: clamp(1.8rem, 2.15vw, 2.5rem);
     color: var(--time-color);

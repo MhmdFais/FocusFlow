@@ -6,45 +6,20 @@
 let timerInterval = null;
 let startButtonPressed = false;
 
-export function showTime(time) {
-    const showTimeContainer = document.createElement("div");
-    showTimeContainer.classList.add("time-container");
-    const timeEl = document.createElement("p");
-    timeEl.classList.remove("time");
-    timeEl.textContent = "";
-    timeEl.classList.add("time");
-    timeEl.textContent = time;
-    showTimeContainer.appendChild(timeEl);
-    return showTimeContainer;
-}
-
-export function startTimeCountdown(minutes) {
-    // let timeLeft = minutes * 60;
-    // const countdownEl = document.querySelector('.time');
-
-    // if (timerInterval) {
-    //     clearInterval(timerInterval);
-    // }
-
-    // timerInterval = setInterval(() => {
-    //     updateCountdown(timeLeft, countdownEl);
-    //     timeLeft--;
-    //     if (timeLeft < 0) {
-    //         clearInterval(timerInterval);
-    //     }
-    // }, 1000);
-
-    while(!startButtonPressed) {
+export function startTimeCountdown(minutes, timeClass) {
+    if (!startButtonPressed) {
         let timeLeft = minutes * 60;
-        const countdownEl = document.querySelector('.time');
+        const countdownEl = document.querySelector(`.${timeClass}`);
 
         if (timerInterval) {
             clearInterval(timerInterval);
         }
 
+        updateCountdown(timeLeft, countdownEl); 
+
         timerInterval = setInterval(() => {
-            updateCountdown(timeLeft, countdownEl);
             timeLeft--;
+            updateCountdown(timeLeft, countdownEl);
             if (timeLeft < 0) {
                 clearInterval(timerInterval);
             }
@@ -62,8 +37,8 @@ function updateCountdown(timeLeft, countdownEl) {
     countdownEl.innerHTML = `${minutes}:${seconds}`;
 }
 
-export function resetTime(time) {
-    const countdownEl = document.querySelector('.time');
+export function resetTime(time, timeClass) {
+    const countdownEl = document.querySelector(`.${timeClass}`);
     countdownEl.innerHTML = time;
 }
 
@@ -74,6 +49,7 @@ export function stopTimeCountdown() {
         timerInterval = null;
     }
 }
+
 
 
 

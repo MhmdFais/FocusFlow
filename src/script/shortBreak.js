@@ -1,19 +1,19 @@
-import {showTime, startTimeCountdown, resetTime, stopTimeCountdown} from '../components/timer'
+import {startTimeCountdown, resetTime, stopTimeCountdown} from '../components/timer'
 
 const shortBreakContainer = document.querySelector(".short-break-container");
 
 export function createShortBreak() {
-    createTheCard();
+    createTheShortCard();
 }
 
-function createTheCard() {
+function createTheShortCard() {
     const headerContainer = document.createElement("div");
-    headerContainer.classList.add("sub-headeing-container");
-    const subHeading = createSubHeading()
+    headerContainer.classList.add("sub-heading-container");
+    const subHeading = createSubHeading();
     headerContainer.appendChild(subHeading);
     shortBreakContainer.appendChild(headerContainer);
 
-    const time = showTime("05:00");
+    const time = showTime("5:00", "short-break-time");
     shortBreakContainer.appendChild(time);
 
     const buttons = createButtons();
@@ -47,11 +47,21 @@ function createButtons(){
     return buttonsContainer;
 }
 
+function showTime(time, timeClass){
+    const showTimeContainer = document.createElement("div");
+    showTimeContainer.classList.add("time-container");
+    let timeEle = document.createElement("p");
+    timeEle.classList.add(timeClass);
+    timeEle.textContent = time;
+    showTimeContainer.appendChild(timeEle);
+    return showTimeContainer;
+}
+
 function startButtonFunction(){
-    startTimeCountdown(5);
+    startTimeCountdown(5, "short-break-time");
 }
 
 function stopButtonFunction() {
-    stopTimeCountdown();
-    resetTime("05:00");
+    stopTimeCountdown("short-break-time");
+    resetTime("5:00", "short-break-time");
 }
