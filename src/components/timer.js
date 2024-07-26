@@ -42,7 +42,7 @@ export function resetTime(time, timeClass) {
     countdownEl.innerHTML = time;
 }
 
-export function stopTimeCountdown() {
+export function stopTimeCountdown(timeClass) {
     if (timerInterval) {
         clearInterval(timerInterval);
         startButtonPressed = !startButtonPressed;
