@@ -58,10 +58,10 @@ function showTime(time, timeClass){
 }
 
 function startButtonFunction(){
-    startTimeCountdown(5, "long-break-time");
+    startTimeCountdown(15, "long-break-time");
 }
 
 function stopButtonFunction() {
     stopTimeCountdown("long-break-time");
-    resetTime("5:00", "long-break-time");
+    resetTime("15:00", "long-break-time");
 }
