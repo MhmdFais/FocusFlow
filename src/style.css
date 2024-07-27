@@ -161,3 +161,24 @@ footer{
     color: var(--time-containers-color);
     transform: scale(0.95);
 }
+
+/* Footer */
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vh 10vw;
+}
+
+.left-text,
+.right-text{
+    font-family: MainFontRegular;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    color: white;
+}
+
+.right-text a{
+    text-decoration: none;
+    color: var(--header-color);
+}

@@ -16,7 +16,8 @@ function leftSide(){
     leftDiv.classList.add("left-footer")
 
     const leftText = document.createElement("p")
-    leftText.textContent = "© 2024 - All Rights Reserved"
+    leftText.classList.add("left-text")
+    leftText.textContent = "2024 - All Rights Reserved"
 
     leftDiv.appendChild(leftText)
 
@@ -28,7 +29,8 @@ function rightSide(){
     rightDiv.classList.add("right-footer")
 
     const rightText = document.createElement("p")
-    rightText.textContent = "Created by: <a href='' target='_blank'>Jorge Sánchez</a>"
+    rightText.classList.add("right-text")
+    rightText.textContent = "Created by: <a href='https://github.com/MhmdFais' target='_blank'>Muhammed</a>"
     rightText.innerHTML = rightText.textContent
 
     rightDiv.appendChild(rightText)
