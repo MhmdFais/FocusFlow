@@ -1,6 +1,6 @@
-Sure! Here is the README in a format that you can easily copy and paste:
 
-```markdown
+
+
 # FocusFlow
 
 FocusFlow is a productivity application that helps users stay focused by providing timers for work sessions, short breaks, and long breaks. The application implements a Pomodoro-like timer functionality to enhance productivity.
