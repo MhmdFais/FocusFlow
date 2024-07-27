@@ -64,7 +64,7 @@ The application consists of three main sections:
 
 - **Focus Timer:** Displays a 25-minute countdown for focused work. Click "Start" to begin the countdown and "Reset" to stop and reset the timer.
 - **Short Break Timer:** Displays a 5-minute countdown for short breaks. Click "Start" to begin the countdown and "Reset" to stop and reset the timer.
-- **Long Break Timer:** Displays a 15-minute countdown for long breaks. (Implementation pending)
+- **Long Break Timer:** Displays a 15-minute countdown for long breaks. Click "Start" to begin the countdown and "Reset" to stop and reset the timer.
 
 
 ## Contributing
